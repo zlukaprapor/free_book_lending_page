@@ -1,0 +1,64 @@
+/* Стилі для загального вигляду */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333; /* Колір фону навігаційного бару */
+    color: #fff; /* Колір тексту в навігаційному барі */
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex; /* Встановлення flex-контейнера */
+    justify-content: space-between; /* Рівномірний розподіл елементів по ширині */
+    align-items: center; /* Вирівнювання по вертикалі в центр */
+    background-color: #333; /* Колір фону навігаційного бару */
+    color: #fff; /* Колір тексту в навігаційному барі */
+    padding: 20px;
+}
+
+.navbar a {
+    color: #fff; /* Колір посилань в навігаційному барі */
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+/* Стилі для головного розділу (Hero Section) */
+.hero {
+    background-image: url("hero-background.jpg"); /* Зображення фону головного розділу */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Колір тексту у головному розділі */
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Стилі для решти секцій можна додавати аналогічно */
+
+/* Стилі для футера */
+footer {
+    background-color: #333; /* Колір фону футера */
+    color: #fff; /* Колір тексту в футері */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff; /* Колір посилань у футері */
+    text-decoration: none;
+    margin: 0 20px;
+}

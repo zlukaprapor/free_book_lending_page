@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     clearButton.addEventListener('click', function () {
         form.reset(); // Очищення форми
-        resultSpan.textContent = '';
+        resultSpan.textContent = '---';
         additionalInfoBlock.style.display = 'none';
     });
     showInfoCheckbox.addEventListener('change', function () {

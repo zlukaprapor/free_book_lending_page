@@ -10,21 +10,33 @@ let moreModal = document.getElementById('moreModal');
 let closeModalButton = document.getElementsByClassName('close');
 
 // Функція для відкриття спливаючого вікна
+function openModal(modal) {
+    modal.style.display = 'block';
+    modal.classList.add('fade-in'); // Додаємо клас з анімацією відображення
+}
+
+// Функція для закриття спливаючих вікон
+function closeModal(modal) {
+    modal.classList.remove('fade-in'); // Видаляємо клас з анімацією відображення
+    modal.style.display = 'none';
+}
+
 openLogModalButton.addEventListener('click', function() {
-    loginModal.style.display = 'block';
+    openModal(loginModal);
 });
 openRegModalButton.addEventListener('click', function() {
-    regModal.style.display = 'block';
+    openModal(regModal);
 });
 openMoreModalButton.addEventListener('click', function() {
-    moreModal.style.display = 'block';
+    openModal(moreModal);
 });
-// Функція для закриття спливаючих вікон
+
+// Додаємо обробник події для кнопок "х"
 for (let i = 0; i < closeModalButton.length; i++) {
     closeModalButton[i].addEventListener('click', function() {
-        regModal.style.display = 'none';
-        loginModal.style.display = 'none';
-        moreModal.style.display = 'none';
+        closeModal(regModal);
+        closeModal(loginModal);
+        closeModal(moreModal);
     });
 }
 

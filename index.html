@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <title>BOOKS</title>
 </head>
 <body>
@@ -62,13 +64,17 @@
         <div class="modal-content">
             <span id="registrationCloseModal" class="close">&#10006;</span> <!-- Кнопка "х" для закриття -->
             <h2>Реєстрація</h2>
-            <form action="/submit" method="post">
+            <form id="registrationForm" action="/submit" method="post">
                 <label for="usernameReg">Ім'я користувача:</label>
                 <input type="text" id="usernameReg" name="username" required>
                 <label for="emailReg">Електронна пошта:</label>
                 <input type="email" id="emailReg" name="email" required>
+                <label for="phoneReg">Номер телефону:</label>
+                <input type="text" id="phoneReg" name="phone">
                 <label for="passwordReg">Пароль:</label>
                 <input type="password" id="passwordReg" name="password" required>
+                <label for="confirmPasswordReg">Підтвердження пароля:</label>
+                <input type="password" id="confirmPasswordReg" name="confirmPassword" required>
                 <button type="submit">Зареєструватися</button>
             </form>
         </div>
@@ -262,6 +268,29 @@
                 <li><a href="#"><img src="./image/free-icon-telegram-2504941.png" alt="Telegram"></a></li>
             </ul>
         </div>
+        <a id="openFeedbackModal" class="button">Зворотний зв'язок</a>
+        <div id="feedbackModal" class="modal">
+            <div class="modal-content">
+                <span id="feedbackCloseModal" class="close">&#10006;</span>
+                <section class="feedback-form">
+                    <h2>Зворотній зв'язок</h2>
+                    <form id="feedbackForm" action="/submit-feedback" method="post">
+                        <label for="nameFeedback">Ім'я:</label>
+                        <input type="text" id="nameFeedback" name="name" required>
+                        <label for="emailFeedback">Електронна пошта:</label>
+                        <input type="email" id="emailFeedback" name="email" required>
+                        <label for="subjectFeedback">Тема:</label>
+                        <input type="text" id="subjectFeedback" name="subject" required>
+                        <label for="messageFeedback">Повідомлення:</label>
+                        <textarea id="messageFeedback" name="message" required></textarea>
+                        <button type="submit">Відправити</button>
+                    </form>
+                    <div id="successMessage" style="display:none;">
+                        <p>Дякуємо за ваше повідомлення! Ми відповімо якнайшвидше.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
 
     </div>
     <div class="footer-bottom">
@@ -269,6 +298,8 @@
     </div>
 </footer>
 <script src="script.js"></script>
+<script src="reg_valid.js"></script>
+<script src="fit-bac_valid.js"></script>
 
 </body>
 </html>
